@@ -38,7 +38,7 @@ US_spend <- data.frame(USPersonalExpenditure)
 
 What are the current column names of your dataframe?
 ```{r}
-
+colnames(US_spend)
 ```
 
 
@@ -46,6 +46,7 @@ Consider: why are they so strange? (Think about whether you could use a number l
 
 What are the current row names of your dataframe?
 ```{r}
+rownames(USPersonalExpenditure)
 
 ```
 
@@ -53,6 +54,7 @@ What are the current row names of your dataframe?
 Add a column "Category" to your data frame that contains the rownames
 
 ```{r}
+USA_spend&Catgeory <- 
 
 ```
 
@@ -99,5 +101,16 @@ Using your function, determine the lowest spending category of each year
 Hint: use the `sapply()` function to apply your function to a vector of years
 
 ```{r}
+Vietnam_data <- filter(gapminder, country == "Vietnam", pop >= 1000000, year > 1990 & lifeExp < 80)
 
+Vietnam_data
+
+Vietnam_old_people <- filter(gapminder, country == "Vietnam", year > 1800 & lifeExp < 60)
+
+Vietnam_old_people %>% arrange(desc(year), desc(country))
+Vietnam_data %>% filter(year > 1900) %>% arrange(desc(lifeExp))
+# order of the control-shift-m shortcut for pipe 
+# order of the %>% matter it comes after a function 
+
+data <- read.csv("../")
 ```
